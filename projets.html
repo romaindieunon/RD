@@ -102,7 +102,6 @@
             <li><a href="index.html">Accueil</a></li>
             <li><a href="profil.html">Profil</a></li>
             <li><a href="projets.html" class="active">Projets</a></li>
-            <li><a href="jeu-memory.html">Mini-jeu</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
@@ -121,8 +120,8 @@
 
         <!-- Projet 1 : Active Directory -->
         <div class="project-detailed fade-in">
-            <h2><span class="project-num">1</span> Infrastructure Active Directory</h2>
-            <p class="project-tagline">Déploiement complet d'un annuaire Microsoft AD DS avec DNS, DHCP, OU, GPO et déploiement automatique de l'agent GLPI sur le parc.</p>
+            <h2><span class="project-num">1</span> Active Directory, DNS &amp; DHCP</h2>
+            <p class="project-tagline">Déploiement d'une infrastructure Active Directory complète avec deux contrôleurs de domaine, basculement DHCP, zones DNS, OU, utilisateurs, GPO et déploiement de l'agent GLPI.</p>
 
             <div class="project-meta-list">
                 <div class="project-meta-item"><span>Domaine</span><strong>btssio.rd</strong></div>
@@ -162,12 +161,19 @@
                 <h4>Bilan</h4>
                 <p style="margin: 0;">Infrastructure résiliente testée en production : authentification AD opérationnelle, DHCP redondant (basculement Beta → Delta validé), résolution DNS bidirectionnelle, agent GLPI déployé automatiquement sur les postes joints au domaine. Documentation complète rédigée pas à pas (154 captures) pour permettre la reprise par un autre administrateur.</p>
             </div>
+
+            <div class="project-section" style="text-align:center; margin-top: 1.5rem;">
+                <a href="procedure-ad.html" class="btn btn-primary">
+                    Voir la procédure complète
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+            </div>
         </div>
 
         <!-- Projet 2 : PFsense -->
         <div class="project-detailed fade-in">
-            <h2><span class="project-num">2</span> Pare-feu PFsense en haute disponibilité (CARP)</h2>
-            <p class="project-tagline">Mise en place de deux pare-feu PFsense redondés avec segmentation VLAN, IDS/IPS Snort et synchronisation XMLRPC entre les deux nœuds.</p>
+            <h2><span class="project-num">2</span> PFsense (Pare-feu &amp; VLAN)</h2>
+            <p class="project-tagline">Installation et configuration de deux pare-feu PFsense redondés (Alpha &amp; Lambda) en haute disponibilité CARP, avec VLAN, IDS Snort, DHCP Relay et sauvegarde XML.</p>
 
             <div class="project-meta-list">
                 <div class="project-meta-item"><span>Système</span><strong>PFsense (FreeBSD)</strong></div>
@@ -209,11 +215,18 @@
                 <h4>Bilan</h4>
                 <p style="margin: 0;">Infrastructure réseau sécurisée et résiliente : un client du VLAN 201 sort sur Internet via le NAT d'Alpha, Lambda reprend l'IP virtuelle CARP en quelques secondes lorsque Alpha est éteinte, la synchronisation XMLRPC propage en temps réel toute modification de configuration entre les deux nœuds, et Snort détecte effectivement les tentatives d'intrusion simulées.</p>
             </div>
+
+            <div class="project-section" style="text-align:center; margin-top: 1.5rem;">
+                <a href="procedure-pfsense.html" class="btn btn-primary">
+                    Voir la procédure complète
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+            </div>
         </div>
 
         <!-- Note discrète sur la documentation -->
         <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 2rem; font-style: italic;">
-            Les procédures complètes (captures et explications pas à pas) sont disponibles sur demande.
+            Cliquez sur « Voir la procédure complète » pour accéder à chaque procédure étape par étape avec captures d'écran.
         </p>
 
     </div>
